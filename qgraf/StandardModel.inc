@@ -1,26 +1,6 @@
 \Begin(boson)
  *  Created 5.1.99 by Oleg Veretin
  *
- *  Corrected 12.11.99:
- *    interaction [Wm,Wm,Wp,Wp] was written incorrectly
- *    (field 2 and 3 were interchanged)
- *
- *
- *  Note: corresponding QGRAPH file is GWS.LEPTONS
- *
- *  Minimal Standard Model  ( for the mu-decay process )
- *  ^^^^^^^^^^^^^^^^^^^^^^
- *  NOTE1:
- *  Here we include 2 lepton generations so that
- *  we can consider mu-decay process.
- *
- *  NOTE2:
- *  Changes made in comparision with zbb model file:
- *     1. Included 2 lepton generations instead of one
- *     2. We add new argument (momentum) to the
- *        scalar propagator function SS. As well we change the 
- *        last argument in the function SS (now it is a mass).
- *
  ******************************************************************
  *
  *  PARTICLE CONTENTS
@@ -52,13 +32,32 @@
  *  (depricated!!) cc  --- cos(2*theta_W)
  *  xiA,xiZ,xiW  --- gauge parameters
  *  xig --- QCD gauge parameter
- *  mmu,mtau,mt,mb,mW,mZ,mH --- masses
- *  mmmu,mmtau,mmt,mmb,mmW,mmZ,mmH --- masses squared
+ *  mt,mb,mW,mZ,mH --- masses
+ *  mmt,mmb,mmW,mmZ,mmH --- masses squared
  *
  *  Qe,Qu,Qd electric charges in units of proton i.e. -1,1/3,-2/3  
  *  GAe,GAnu,GAu,GAd --- axial couplings 
  *  GVe,GVnu,GVu,GVd --- vector couplings 
  *
+ *  We have doublets
+ *
+ *      / nu \     / u \
+ *      \ e  /     \ d /   etc....
+ *
+ * id GVu = +1/2-4/3*s^2;
+ * id GAu = +1/2;
+ * id GVd = -1/2+2/3*s^2;
+ * id GAd = -1/2;
+ *
+ * id GVnu = +1/2;
+ * id GAnu = +1/2;
+ * id GVe = -1/2+2*s^2;
+ * id GAe = -1/2;
+ *
+ * id Qe = -1;
+ * id Qu = +2/3;
+ * id Qd = -1/3;
+
  *
  ******************************************************************
 
