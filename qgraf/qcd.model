@@ -1,0 +1,53 @@
+﻿
+%  simplified QCD with neither flavour nor colour indices
+
+
+%  quark propagators
+
+  [ u, U, - ]
+  [ d, D, - ]
+  [ s, S, - ]
+
+%  gluon propagator
+
+  [ g, g, + ]
+
+%  ghost propagator
+
+  [ c, C, - ]
+
+
+% barionic operator
+
+  [ J3, J3, -, external]
+
+% twist 3 QGq operator
+
+  [ QGq, QGq, +, external]
+
+%  vertices
+
+  [ U, u, g ]
+  [ D, d, g ]
+  [ S, s, g ]
+
+  [ g, g, g ]
+
+  [ g, g, g, g ]
+
+  [ C, c, g ]
+
+% operator vertices for J3
+
+  [ J3,    u, d, s ]
+
+  [ J3,    u, d, s, g ]
+
+  [ J3,    u, d, s, g, g ]
+
+% non-single operator vertices for twist3  qGq
+
+  [ QGq, U, d ]
+  [ QGq, U, d, g ]
+  [ QGq, U, d, g, g ]
+

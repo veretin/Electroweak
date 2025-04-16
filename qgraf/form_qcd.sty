@@ -1,0 +1,47 @@
+<prologue>
+
+* <program> config:
+*
+<command_loop><command_line_loop>* <command_data><end><end><back>
+*
+*  Format:
+*   -- propagators: 
+*      P(pnum, A(field), A(from_vnum,to_pnum), momentum)
+*   -- vertices:
+*      V(vnum, A(fileds,..), A(from_vnum,to_pnum),..., mommentum1, ...)
+*
+
+<diagram>
+*--#[[ b<diagram_index>:
+#define LINES "<propagators>"
+#define VERTICES "<vertices>"
+   DIA(<diagram_index>)
+  *IN(  <in_loop>A([[<field>]],<field_index>,<momentum>), <end><back><back>  )
+  *OUT(  <out_loop>A([[<field>]],<field_index>,<momentum>), <end><back><back>  )
+  *(<sign><symmetry_factor>)
+
+<back><back>
+<propagator_loop><back>
+  *P(<propagator_index>, A([[<field>]]),  
+<back> A(<vertex_index>,<propagator_index>),  
+<back> A(<dual-vertex_index>,<propagator_index>), 
+<back>  <momentum>)
+<end><back>
+
+<back><back>
+<vertex_loop><back>
+  *V(<vertex_index>, A(<ray_loop>[[<field>]],<end><back>),
+<back><ray_loop> A(<vertex_index>,<propagator_index>),
+<back><end>
+      <ray_loop> <momentum>,
+<back><end><back>)
+<end><back>
+*--#]] b<diagram_index>:
+
+<epilogue>
+*--#[[ n0:
+#define DIAMAX "<diagram_index>"
+*--#]] n0:
+
+*** EOF
+<exit>

@@ -1,0 +1,24 @@
+
+% config= nolist, lf, verbose ;
+
+ output= 'out' ;
+
+ style= 'form_qcd.sty' ;
+
+ model= 'SM.model';
+
+ in  = e1[p1], NU1[p2];
+ out = e2[p3], NU2[p4];
+
+ loops = 1;
+
+ loop_momentum = k;
+
+ options = onshell;
+
+% Gaugeless limit Option:
+true = iprop[Wp,Z,A,g, 0,0];
+
+% options = onshell, notadpole, nosnail, onepi;
+% true = iprop[u,d,s,0,0];
+

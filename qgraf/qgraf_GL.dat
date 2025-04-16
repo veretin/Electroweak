@@ -1,0 +1,23 @@
+
+% config= nolist, lf, verbose ;
+
+ output= 'out' ;
+
+ style= 'form_qcd.sty' ;
+
+ model= 'SM.model';
+
+ in  = H[q];
+ out = H[q];
+
+ loops = 3;
+
+ loop_momentum = k;
+
+ options = onshell;
+
+true = bridge[g,A,Z,G0,Gm,Gp, 0,0];
+
+% Gaugeless limit Option:
+true = iprop[Wp,Wm,Z,A,g, e1,e2,e3,nu1,nu2,nu3, u,d,s,c, ghA,ghZ,ghp,ghm, 0,0];
+
