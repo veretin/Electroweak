@@ -6,11 +6,11 @@
  *  PARTICLE CONTENTS
  *  ^^^^^^^^^^^^^^^^^
  *  Fermions:
- *   a) leptons: two gwnerations
- *                        e1,E1  nu1,NU1 
- *                        e2,E2  nu2,NU2
+ *   a) leptons
+ *                 e1,E1    e2,E2    e3,E3
+ *                 nu1,NU1  nu2,NU2  nu3,NU3
  * 
- *   b) quarks     u,U  d,D   b,B  t,T
+ *   b) quarks     u,U  d,D  c,C  s,S  t,T b,B
  *
  *  Gauge bosons:
  *  A, Z, (Wp,Wm)   gluon g
